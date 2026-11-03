@@ -1,0 +1,72 @@
+/* Custom styles that complement Tailwind */
+
+html { scroll-behavior: smooth; }
+
+::selection { background: #6366f1; color: #fff; }
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Floating gradient blobs in hero */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: .55;
+  animation: float 14s ease-in-out infinite;
+  pointer-events: none;
+}
+.blob-2 { animation-delay: -5s; animation-duration: 18s; }
+.blob-3 { animation-delay: -9s; animation-duration: 16s; }
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.08); }
+  66% { transform: translate(-30px, 20px) scale(.95); }
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(120deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle dotted background */
+.bg-dots {
+  background-image: radial-gradient(rgba(100, 116, 139, .25) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Card image zoom */
+.card-img { transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
+.group:hover .card-img { transform: scale(1.06); }
+
+/* Reading progress bar */
+#progress {
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+/* Toast */
+.toast {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all .35s ease;
+}
+.toast.show { transform: none; opacity: 1; }
+
+/* FAQ details marker */
+details summary::-webkit-details-marker { display: none; }
+details[open] .faq-icon { transform: rotate(45deg); }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .card-img, .blob { transition: none; animation: none; opacity: 1; transform: none; }
+}

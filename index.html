@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inkwell — Stories on Design, Code & Life</title>
+  <meta name="description" content="Inkwell is a modern blog with thoughtful writing on design, development, productivity and living well.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script src="js/tw-config.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home" class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 font-sans antialiased">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-dots [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"></div>
+      <div class="blob w-96 h-96 bg-brand-400 -top-20 -left-20"></div>
+      <div class="blob blob-2 w-80 h-80 bg-pink-400 top-10 right-0"></div>
+      <div class="blob blob-3 w-72 h-72 bg-purple-400 bottom-0 left-1/3"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 md:pt-28 md:pb-28 text-center">
+        <span class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 text-sm font-medium text-slate-600 dark:text-slate-300 backdrop-blur">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          New articles every week
+        </span>
+        <h1 class="reveal mt-6 font-serif text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05] text-slate-900 dark:text-white">
+          Ideas worth <span class="text-gradient italic">reading</span>,<br class="hidden sm:block"> stories worth sharing.
+        </h1>
+        <p class="reveal mt-6 max-w-2xl mx-auto text-lg md:text-xl text-slate-600 dark:text-slate-400">
+          Thoughtful essays and practical guides on design, development, productivity and living a little more intentionally.
+        </p>
+        <div class="reveal mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="blog.html" class="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-semibold hover:scale-[1.03] transition">
+            Start reading
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <a href="about.html" class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-700 font-semibold text-slate-800 dark:text-slate-200 hover:bg-white dark:hover:bg-slate-800 backdrop-blur transition">
+            About us
+          </a>
+        </div>
+        <dl class="reveal mt-16 grid grid-cols-3 max-w-lg mx-auto gap-6">
+          <div><dt class="text-sm text-slate-500 dark:text-slate-400">Readers</dt><dd class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">12k+</dd></div>
+          <div><dt class="text-sm text-slate-500 dark:text-slate-400">Articles</dt><dd class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">240</dd></div>
+          <div><dt class="text-sm text-slate-500 dark:text-slate-400">Topics</dt><dd class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">5</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="featured-post"></div>
+    </section>
+
+    <!-- Latest -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+      <div class="flex items-end justify-between gap-4 mb-10">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">Fresh off the press</p>
+          <h2 class="mt-2 font-serif text-3xl md:text-4xl font-semibold text-slate-900 dark:text-white">Latest articles</h2>
+        </div>
+        <a href="blog.html" class="group hidden sm:inline-flex items-center gap-2 font-semibold text-slate-700 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400">
+          View all
+          <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div id="latest-posts" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
+      <div class="mt-10 text-center sm:hidden">
+        <a href="blog.html" class="inline-flex px-6 py-3 rounded-full border border-slate-300 dark:border-slate-700 font-semibold">View all articles</a>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+      <div class="text-center mb-10">
+        <p class="text-sm font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">Find your thing</p>
+        <h2 class="mt-2 font-serif text-3xl md:text-4xl font-semibold text-slate-900 dark:text-white">Browse by topic</h2>
+      </div>
+      <div id="category-list" class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/posts.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
